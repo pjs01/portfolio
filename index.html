@@ -4,168 +4,145 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TIS정보기술교육센터</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/animate.min.css">
     <style>
-      .navbar{
-        background-color: #ffffff !important;
-      }
-      .navbar a{color:black !important;}
-      .carousel-caption{
-        position: absolute;
-        left:-500px;
-        top:280px;
-      }
-      .carousel-caption>h3{
-        font-size: 70px;
-      }
-      .img_pc,.caption_pc, #siteMap{display: block !important;}
-      .img_mobile,.caption_mobile, #siteMap_mobile{display: none !important;}
-      
-      .carousel-indicators li{
-        text-indent:0 !important;
-        border:none;
-        width:150px;
-        height: 10px;
-        color: white;
-      }
-      .carousel-indicators .active{
-        width:150px;
-        height: 10px;;
-        background-color: rgba(0,0,0,0);
-      } 
-      
-      .carousel-indicators li:nth-child(1).active{color:black;}
-      .carousel-indicators li:nth-child(1).active ~ li{color:black;}
-      .carousel-indicators li.active{font-weight:bold;text-decoration: underline;}
-
-      .col-sm-3 img{
-        width:100%;
-        height: 100%;
-      }
-      #siteMap ul{list-style: none;}
-
-      .border-right{
-        border-right:1px solid gray;
-      }
-      @media screen and (max-width:768px){
-        .img_pc,.caption_pc, #siteMap{display: none !important;}
-        .img_mobile, .caption_mobile, #siteMap_mobile{display: block !important;}
-
+        @font-face {
+          font-family: jejugothic;
+          src: url("img/JejuGothic.ttf");
+        }
+        *{margin: 0;padding: 0;}
+        nav{
+          opacity: 0.7;
+        }
+        nav a{ 
+          color:white !important;
+        }
+        .navbar-default {
+            background-color: #0f2e70;
+            border-color: #e7e7e7;
+        }
+        .navbar-brand{
+          position: absolute;
+          top: -10px !important;
+        }
+        .carousel-inner img{
+            width: 100%;
+            height: 700px !important;
+        }
         .carousel-caption{
-          top:0 !important;
-          width:100% !important;
-          left:0;
-          text-align: center !important;
+          top:40%;
+          font-size: 30px;
+          font-family: jejugothic;
         }
-
-        .carousel-caption>h3{
-          font-size: 60px;
+        .carousel-caption h3{
+          font-size: 50px;
         }
-        
-        
-        
-      }
-
+        .item .carousel-caption h3{
+          color:#d8cdd8 !important;
+        }
+        .container h1, .container-fluid h1{
+          padding-top: 100px;
+          font-family: jejugothic;
+        }
+        @media screen and (max-width:768px) {
+          .carousel-caption{
+            top:35%;
+            font-size: 20px;
+          }
+          .carousel-caption h3{
+            font-size: 30px;
+          }   
+        }
     </style>
-     <script type="text/javascript">
-      // iframe resize
-      function autoResize(i)
-      {
-          (i).height=0;
-          var iframeHeight=
-          (i).contentWindow.document.body.scrollHeight;
-          (i).height=iframeHeight+20;
-      }
+    <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+      
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+      
+          // Prevent default anchor click behavior
+          event.preventDefault();
+      
+          // Store hash
+          var hash = this.hash;
+      
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function(){
+      
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+            });
+          } // End if
+        });
+      })
       </script>
 </head>
-<body>
-  <!-- Navigation ----------------------------------------------------------------->
+<body id="myPage">
+    <!-- Navigation ---------------------------------------------------------------------->
     <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#myPage"><img src="img/logo.svg" alt="삼성로고"></a>
+          <a class="navbar-brand" href="#myPage"><img src="img/logo.png" alt="로고" width="200"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#about" data-toggle="collapse" data-target=".navbar-collapse.in">제품</a></li>
-            <li><a href="#history" data-toggle="collapse" data-target=".navbar-collapse.in">기획전</a></li>
-            <li><a href="#services" data-toggle="collapse" data-target=".navbar-collapse.in">스토리</a></li>    
-            <li><a href="#map" data-toggle="collapse" data-target=".navbar-collapse.in">고객서비스</a></li>   
-            <li><a href="#contact" data-toggle="collapse" data-target=".navbar-collapse.in">멤버십</a></li>
+            <li><a href="#subject" data-toggle="collapse" data-target=".navbar-collapse.in">과정소개</a></li>
+            <li><a href="#community" data-toggle="collapse" data-target=".navbar-collapse.in">커뮤니티</a></li>
+            <li><a href="#maps" data-toggle="collapse" data-target=".navbar-collapse.in">오시는길</a></li>
           </ul>
         </div>
       </div>
     </nav>
     <!-- Navigation -->
-    <!-- 캐러셀 ----------------------------------------------------------->
+
+    <!-- Carousel ------------------------------------------------------------------------->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active">BESPOKE냉장고</li>
-          <li data-target="#myCarousel" data-slide-to="1">GalaxyS21 5G</li>
-          <li data-target="#myCarousel" data-slide-to="2">BESPOKE제트</li>
-         
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
       
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <img class="img_pc" src="img/img03_pc.webp" alt="BESPOKE 냉장고">
-            <img class="img_mobile" src="img/img03_mobile.webp" alt="BESPOKE 냉장고">
-            <div class="carousel-caption caption_pc" style="color:black;">
-              <h3>2021 NEW<br>
-              BESPOKE 냉장고 런칭
-              </h3>     
-              <p>2021 새로운 컬러와 삼성닷컴 단독혜택을 만나보세요</p>         
-            </div>
-            <div class="carousel-caption caption_mobile" style="color:black;">
-              <h3>2021 NEW<br>
-              BESPOKE 냉장고 런칭
-              </h3>     
-              <p>2021 새로운 컬러와 삼성닷컴 단독혜택을 만나보세요</p>         
-            </div>
-          </div>
-          <div class="item">
-            <img class="img_pc" src="img/img01_pc.webp" alt="갤럭시S 21">
-            <img class="img_mobile" src="img/img01_mobile.webp" alt="갤럭시S 21">
-            <div class="carousel-caption caption_pc">
-              <h3>Galaxy S21 I S21+<br>
-                S21 Ultra 5G
-              </h3>  
-              <p>지금 삼성닷컴에서 중고폰 추가혜택으로 만나보세요</p>            
-            </div>
-            <div class="carousel-caption caption_mobile">
-              <h3>Galaxy S21 I S21+<br>
-                S21 Ultra 5G
-              </h3>  
-              <p>지금 삼성닷컴에서 중고폰 추가혜택으로 만나보세요</p>            
+            <img src="img/pic01.jpg" alt="배경1">
+            <div class="carousel-caption">
+              <h3 class="animate__animated animate__slideInDown">직업능력개발 우수훈련기관 선정</h3>
+              <p>직업훈련의 품질을 높이고 일자리 창출에 앞장서는 교육기관이 되겠습니다.</p>
             </div>
           </div>
       
           <div class="item">
-            <img class="img_pc" src="img/img02_pc.webp" alt="BESPOKE 제트">
-            <img class="img_mobile" src="img/img02_mobile.webp" alt="BESPOKE 제트">
-            <div class="carousel-caption caption_pc" style="color: black;">
-              <h3>BESPOKE제트런칭</h3>     
-              <p>최대 18만원 혜택을 받고<br>
-              새로워진 BESPOE제트를 만나보세요</p>         
-            </div>
-            <div class="carousel-caption caption_mobile" style="color: black;">
-              <h3>BESPOKE제트런칭</h3>     
-              <p>최대 18만원 혜택을 받고<br>
-              새로워진 BESPOE제트를 만나보세요</p>         
+            <img src="img/pic02.jpg" alt="배경2">
+            <div class="carousel-caption">
+              <h3 class="animate__animated animate__slideInDown">이수자평가 A등급 획득</h3>
+              <p>직업능력개발훈련 이수자평가에서 최우수 A등급을 획득하였습니다.</p>
             </div>
           </div>
       
-          
+          <div class="item">
+            <img src="img/pic03.jpg" alt="배경3">
+            <div class="carousel-caption">
+              <h3 class="animate__animated animate__slideInDown">4차산업혁명을 선도하는 IT 신기술교육의 메카</h3>
+              <p>최신IT기술 트렌드를 접목한 실무중심의 교육으로 대한민국 4차 산업혁명 시대의 미래를 열어가겠습니다.</p>
+            </div>
+          </div>
         </div>
       
         <!-- Left and right controls -->
@@ -178,182 +155,133 @@
           <span class="sr-only">Next</span>
         </a>
     </div>
-    <!-- 캐러셀 -->
-    <!-- 고객지원 ------------------------------------------------------------------->
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3 col-xs-6">
-          <img class="img_pc" src="img/pic01_pc.webp" alt="Trade-In">
-          <img class="img_mobile" src="img/pic01_mobile.webp" alt="Trade-In">
-        </div>
-        <div class="col-sm-3 col-xs-6">
-          <img class="img_pc" src="img/pic02_pc.webp" alt="갤럭시캠퍼스스토어">
-          <img class="img_mobile" src="img/pic02_mobile.webp" alt="갤럭시캠퍼스스토어">
-        </div>
-        <div class="col-sm-3 col-xs-6">
-          <img class="img_pc" src="img/pic03_pc.webp" alt="웨딩|신혼샵">
-          <img class="img_mobile" src="img/pic03_mobile.webp" alt="웨딩|신혼샵">
-        </div>
-        <div class="col-sm-3 col-xs-6">
-          <img class="img_pc" src="img/pic04_pc.webp" alt="추천모델">
-          <img class="img_mobile" src="img/pic04_mobile.webp" alt="추천모델">
-        </div>        
-      </div>
-    </div>
-    <!-- 고객지원 -->
-    <!-- 게시판 --------------------------------------------------------->
-    <div class="container" id="board">
-      <h3 class="text-center">BOARD</h3>
-      <iframe id="iframe1" src="http://pjs.dothome.co.kr/g5/bbs/board.php?bo_table=board01" width="100%" onload="autoResize(this)" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-    </div>
+    <!-- Carousel -->
 
-    <!-- 게시판 -->
-    <!-- Site Map ------------------------------------------------------------------->
-    <div id="siteMap" class="container-fluid" style="border-top:1px solid gray;border-bottom:1px solid gray;">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-2">
-            <h3>제품</h3>
-            <ul>
-              <li>스마트폰</li>
-              <li>태블릿</li>
-              <li>워치</li>
-              <li>버즈</li>
-              <li>TV</li>
-              <li>Lifestyle TV</li>
-              <li>BESPOKE</li>
-              <li>냉장고</li>
-              <li>김치냉장고</li>
-            </ul>      
-          </div>
-          <div class="col-sm-2 border-right">
-            <h3>제품</h3>
-            <ul>
-              <li>스마트폰</li>
-              <li>태블릿</li>
-              <li>워치</li>
-              <li>버즈</li>
-              <li>TV</li>
-              <li>Lifestyle TV</li>
-              <li>BESPOKE</li>
-              <li>냉장고</li>
-              <li>김치냉장고</li>
-            </ul>      
-          </div>
-          <div class="col-sm-2 border-right">
-            <h3>제품</h3>
-            <ul>
-              <li>스마트폰</li>
-              <li>태블릿</li>
-              <li>워치</li>
-              <li>버즈</li>
-              <li>TV</li>
-              <li>Lifestyle TV</li>
-              <li>BESPOKE</li>
-              <li>냉장고</li>
-              <li>김치냉장고</li>
-            </ul>      
-          </div>
-          <div class="col-sm-2 border-right">
-            <h3>제품</h3>
-            <ul>
-              <li>스마트폰</li>
-              <li>태블릿</li>
-              <li>워치</li>
-              <li>버즈</li>
-              <li>TV</li>
-              <li>Lifestyle TV</li>
-              <li>BESPOKE</li>
-              <li>냉장고</li>
-              <li>김치냉장고</li>
-            </ul>      
-          </div>
-          <div class="col-sm-2 border-right">
-            <h3>제품</h3>
-            <ul>
-              <li>스마트폰</li>
-              <li>태블릿</li>
-              <li>워치</li>
-              <li>버즈</li>
-              <li>TV</li>
-              <li>Lifestyle TV</li>
-              <li>BESPOKE</li>
-              <li>냉장고</li>
-              <li>김치냉장고</li>
-            </ul>      
-          </div>
-          <div class="col-sm-2">
-            <h3>제품</h3>
-            <ul>
-              <li>스마트폰</li>
-              <li>태블릿</li>
-              <li>워치</li>
-              <li>버즈</li>
-              <li>TV</li>
-              <li>Lifestyle TV</li>
-              <li>BESPOKE</li>
-              <li>냉장고</li>
-              <li>김치냉장고</li>
-            </ul>      
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="siteMap_mobile" class="container">
-      <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-             제품</a>
-            </h4>
-          </div>
-          <div id="collapse1" class="panel-collapse collapse in">
-            <div class="panel-body">
-              <ul>
-                <li>스마트폰</li>
-                <li>태블릿</li>
-                <li>워치</li>
-                <li>버즈</li>
-                <li>TV</li>
-                <li>Lifestyle TV</li>
-                <li>BESPOKE</li>
-                <li>냉장고</li>
-                <li>김치냉장고</li>
-              </ul> 
+    <!-- 과정소개 --------------------------------------------------------->
+    <div id="subject" class="container">
+        <h1 class="text-center">과정소개</h1>
+        <div class="row text-center">
+            <div class="col-sm-3">
+              <div class="thumbnail">
+                <img src="img/pic04.jpg" alt="Paris">
+                <p><strong>웹&앱 콘텐츠 융합 자바(JAVA) 응용SW 및 웹개발자 양성 과정</strong></p>
+                <p>교육기간 : 2022.09.19 ~ 2023.02.15 <br><span class="red">(5개월/900시간)</span></p>
+              </div>
             </div>
-          </div>
+            <div class="col-sm-3">
+              <div class="thumbnail">
+                <img src="img/pic05.jpg" alt="New York">
+                <p><strong>New York</strong></p>
+                <p>Sat. 28 November 2015</p>
+                <button class="btn">Buy Tickets</button>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="thumbnail">
+                <img src="img/pic06.jpg" alt="San Francisco">
+                <p><strong>San Francisco</strong></p>
+                <p>Sun. 29 November 2015</p>
+                <button class="btn">Buy Tickets</button>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="thumbnail">
+                <img src="img/pic07.jpg" alt="San Francisco">
+                <p><strong>San Francisco</strong></p>
+                <p>Sun. 29 November 2015</p>
+                <button class="btn">Buy Tickets</button>
+              </div>
+            </div>
         </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-              Collapsible Group 2</a>
-            </h4>
-          </div>
-          <div id="collapse2" class="panel-collapse collapse">
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat.</div>
-          </div>
+    </div>
+    <!-- 과정소개-->
+
+    <!-- 커뮤니티 -------------------------------------------------------->
+    <div id="community" class="container">
+      <h1 class="text-center">커뮤니티</h1>
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">교육센터 소식</a></li>
+        <li><a data-toggle="tab" href="#menu1">자주묻는질문</a></li>
+        <li><a data-toggle="tab" href="#menu2">서식자료실</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+          <h3>교육센터 소식</h3>
+          <ul class="list-group">
+            <li class="list-group-item">7월 20일(수) 개강하는 취업연수과정 OT(오리엔테이션) 안내입니다.</li>
+            <li class="list-group-item">2022년도 데이터 자격검정 시험일정입니다.</li>
+            <li class="list-group-item">스텝(STEP) 학습시 주의사항</li>
+          </ul>
         </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-              Collapsible Group 3</a>
-            </h4>
-          </div>
-          <div id="collapse3" class="panel-collapse collapse">
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat.</div>
-          </div>
+        <div id="menu1" class="tab-pane fade">
+          <h3>자주묻는질문</h3>
+          <ul class="list-group">
+            <li class="list-group-item">7월 20일(수) 개강하는 취업연수과정 OT(오리엔테이션) 안내입니다.</li>
+            <li class="list-group-item">2022년도 데이터 자격검정 시험일정입니다.</li>
+            <li class="list-group-item">스텝(STEP) 학습시 주의사항</li>
+          </ul>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+          <h3>서식자료실</h3>
+          <ul class="list-group">
+            <li class="list-group-item">7월 20일(수) 개강하는 취업연수과정 OT(오리엔테이션) 안내입니다.</li>
+            <li class="list-group-item">2022년도 데이터 자격검정 시험일정입니다.</li>
+            <li class="list-group-item">스텝(STEP) 학습시 주의사항</li>
+          </ul>
         </div>
       </div>
     </div>
-    <!-- Site Map -->
+    <!-- 커뮤니티 -->
+
+    <!-- 오시는 길 -------------------------------------------------->
+    <div id="maps" class="container-fluid" style="margin: 0 !important;padding:0 !important;">
+      <h1 class="text-center">오시는 길</h1>
+      <div id="map" style="width:100%;height:500px;"></div>
+
+      <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2f0bb35932325e9049074ab790afaa8f"></script>
+      <script>
+      var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+          mapOption = { 
+              center: new kakao.maps.LatLng(37.5251957, 126.8913598), // 지도의 중심좌표
+              level: 3 // 지도의 확대 레벨
+          };
+
+      var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+      // 마커가 표시될 위치입니다 
+      var markerPosition  = new kakao.maps.LatLng(37.5251957, 126.8913598); 
+
+      // 마커를 생성합니다
+      var marker = new kakao.maps.Marker({
+          position: markerPosition
+      });
+
+      // 마커가 지도 위에 표시되도록 설정합니다
+      marker.setMap(map);
+
+      // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+      // marker.setMap(null);    
+      </script>
+    </div>
+    <!-- 오시는 길 -->
+
+    <!-- footer ---------------------------------------------------------------------------->
+    <footer class="container-fluid" style="background-color: #424141;">
+      <div class="container" style="color: #eeeeee;padding-top: 50px !important; padding-bottom: 50px !important;">
+        ㈜티아이에스정보시스템 / 티아이에스정보기술교육센터 / 대표이사 : 김휘준<br>
+        사업자등록번호 : 113-86-70392 / 통신판매업신고 : 제2015-서울영등포-0490호<br>
+        수강&입학문의 : 02-2069-1931 / 업무문의 : 02-2069-1930 / 팩스 : 02-2069-1932 / 개인정보책임자 : 이형석<br>
+        
+        <div>
+          (우: 70255) 서울특별시 영등포구 선유로 130 (지번 : 양평동 3가 5-4번지), 에이스하이테크시티3차 2층(교무실 : 212호, 강의실 : 202호, 210호, 211호)
+        </div>    
+        <div>
+          COPYRIGHT © 2013 TIS Information Technology Education Center. All RIGHTS RESERVED.
+        </div>
+
+      </div>
+    </footer>
+    <!-- footer -->
 </body>
 </html>
