@@ -12,17 +12,15 @@ article h1:hover{color:white;background-color: #002C5F;}
 
 /* mobile ***************************************/
 @media screen and (max-width:767px) {
-    .navbar-toggler{border: 1px solid gray !important;}
-    .navbar-toggler-icon{background: white !important;color:gray !important;}
-
+   
     #demo{display: none;}
-    #demo2{display: block;height: 700px;}
-    #demo2 .carousel-inner{display: block;height: 700px;}
+    #demo2{height: 700px !important;}
+    #demo2 .carousel-inner{height: 700px !important;}
 
     .caption{
         position: absolute !important;
         left:10px !important;
-        bottom:20px !important;
+        bottom:180px !important;
         z-index: 10000 !important;
         color:white !important;
     }
@@ -46,9 +44,12 @@ article h1:hover{color:white;background-color: #002C5F;}
     #footer-mobile{display: block;}
     #footer-pc{display: none;}
     
+    #footer-mobile{background: black;border:none;border-radius: 0px;}
     #footer-mobile .card{background: black;border:none;border-radius: 0px;}
     #footer-mobile .card-header h4{color: white;}
     #footer-mobile .card-body{color:#bbb;}
+
+    #copyright-mobile{padding-bottom: 50px;color:white;text-align: center;}
     
 }
 
@@ -71,7 +72,6 @@ article h1:hover{color:white;background-color: #002C5F;}
 
     article{float: left;}
 
-   
     article:nth-of-type(1){width:66.6666%;background-color: red;}
     article:nth-of-type(2){float:right;height:850px;background-color: green;}
     article:nth-of-type(3){background-color: blue;}

@@ -13,6 +13,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        $(document).ready(function(){
+            $('.navbar-nav a').on('click', function(){
+                var width=$(window).width();
+                if(width<=767){
+                    //$('.btn-navbar').click(); //bootstrap 2.x
+                    //$('.navbar-toggle').click(); //bootstrap 3.x 
+                    $('.navbar-toggler').click(); //bootstrap 4.x  
+                       
+                   }
+                }
+            );
+        });
+    </script>
 </head>
 <body>
     <!-- navigation -------------------------------------------------------->
@@ -21,18 +36,20 @@
             <img src="img/logo.png" alt="로고이미지" width="200">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon">   
+                <i class="fa-solid fa-bars" style="color:gray; font-size:28px;"></i>               
+            </span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">브랜드 저널</a>
+              <a class="nav-link" href="#" data-toggle="collapse" data-target=".navbar-collapse.in">브랜드 저널</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">모델</a>
+              <a class="nav-link" href="#" data-toggle="collapse" data-target=".navbar-collapse.in">모델</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">회사소개</a>
+              <a class="nav-link" href="#" data-toggle="collapse" data-target=".navbar-collapse.in">회사소개</a>
             </li>    
           </ul>
         </div>  
@@ -100,7 +117,7 @@
         </ul>
       
         <!-- The slideshow -->
-        <div class="carousel-inner">
+        <div class="carousel-inner" style="background: red;">
           <div class="carousel-item active">
             <video loop autoplay muted width="100%">
                 <source src="img/santafe-m.mp4" type="video/mp4">
@@ -111,7 +128,7 @@
             </h2>
           </div>
           <div class="carousel-item">
-            <video loop autoplay muted>
+            <video loop autoplay muted width="100%">
                 <source src="img/pony-m.mp4" type="video/mp4">
             </video>
             <h2 class="caption">   
@@ -120,7 +137,7 @@
             </h2>
           </div>
           <div class="carousel-item">
-            <video loop autoplay muted>
+            <video loop autoplay muted width="100%">
                 <source src="img/worldcup-m.mp4" type="video/mp4">
             </video>
             <h2 class="caption">   
@@ -234,7 +251,7 @@
 
     <!-- footer mobile ------------------------------------------------------------->
     <footer id="footer-mobile">
-        <div id="accordion">
+        <div id="accordion" style="padding-top: 50px !important;>
             <div class="card">
               <div class="card-header">
                 <a class="card-link" data-toggle="collapse" href="#collapseOne">
@@ -278,14 +295,16 @@
                   </a>
                 </div>
                 <div id="collapseThree" class="collapse" data-parent="#accordion">
-                    <ul>
-                        <li>N</li>
-                        <li>현대 모터 스튜디오</li>
-                        <li>현대 컬렉션</li>
-                        <li>현대 아트랩</li>
-                        <li>현대 NTF</li>
-                        <li>현대 키즈 모터쇼</li>
-                    </ul>
+                    <div class="card-body">
+                        <ul>
+                            <li>N</li>
+                            <li>현대 모터 스튜디오</li>
+                            <li>현대 컬렉션</li>
+                            <li>현대 아트랩</li>
+                            <li>현대 NTF</li>
+                            <li>현대 키즈 모터쇼</li>
+                        </ul>
+                    </div>
                 </div>
               </div>
           
@@ -310,6 +329,9 @@
               </div>
             </div>
           
+            <div id="copyright-mobile" style="padding-top: 20px;">
+                &copy; 2023 Hyundai Motor Company
+            </div>
         </div>
     </footer>
     <!-- footer mobile.end -->
