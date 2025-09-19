@@ -249,7 +249,7 @@
     margin: 10px auto;
     transition: 0.5s;
     width:230px; /* 가로사이즈를 pc용보다 작게*/
-    height: 210px; /* 세로사이즈를 pc용보다 작게*/
+    height: 230px; /* 세로사이즈를 pc용보다 작게*/
     border-radius: 10px !important;
 
 
