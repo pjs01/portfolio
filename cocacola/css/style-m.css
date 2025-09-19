@@ -239,20 +239,21 @@
   }
   #brand-m {
     display: block; /* mobile용 brand 보이게 */
+
   }
   /* 모바일용 brand안의 박스설정 */
   #brand-m .col-md-6{
     background: white;
     box-sizing: border-box !important;
-    margin: 10px;
+
     transition: 0.5s;
-    width:45%; /* 가로사이즈를 pc용보다 작게*/
+    width:46%; /* 가로사이즈를 pc용보다 작게*/
     height: 210px; /* 세로사이즈를 pc용보다 작게*/
     border-radius: 10px !important;
 
     display: flex;
     align-items: center;        /* 세로 가운데 정렬 */
-
+    margin: 2%;
   }
   /* 부모박스에 이미지 크기 딱 맞게 */
   #brand-m .col-md-6 img{
