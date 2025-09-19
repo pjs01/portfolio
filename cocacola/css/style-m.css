@@ -248,7 +248,7 @@
     box-sizing: border-box;
     margin: 10px auto;
     transition: 0.5s;
-    width:230px; /* 가로사이즈를 pc용보다 작게*/
+    width:200px; /* 가로사이즈를 pc용보다 작게*/
     aspect-ratio: 1 / 1;
     height: auto !important;
     border-radius: 10px !important;
