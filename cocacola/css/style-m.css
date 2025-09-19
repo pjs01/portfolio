@@ -170,6 +170,7 @@
     margin-left: auto !important;
     margin-right: auto !important;
     margin-bottom: -70px !important; /* 아래쪽 박스가 위로 올라와서 겹치게 */
+
     padding: 15px !important;
 
     position: relative; /* 기준 위치 */
@@ -239,21 +240,23 @@
   }
   #brand-m {
     display: block; /* mobile용 brand 보이게 */
-
+    text-align: center !important;
   }
   /* 모바일용 brand안의 박스설정 */
   #brand-m .col-md-6{
     background: white;
-    box-sizing: border-box !important;
-
+    box-sizing: border-box;
+    margin: 10px auto;
     transition: 0.5s;
-    width:46%; /* 가로사이즈를 pc용보다 작게*/
+    width:230px; /* 가로사이즈를 pc용보다 작게*/
     height: 210px; /* 세로사이즈를 pc용보다 작게*/
     border-radius: 10px !important;
 
+
+
     display: flex;
     align-items: center;        /* 세로 가운데 정렬 */
-    margin: 2%;
+
   }
   /* 부모박스에 이미지 크기 딱 맞게 */
   #brand-m .col-md-6 img{
