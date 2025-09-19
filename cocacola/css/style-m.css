@@ -243,10 +243,10 @@
   /* 모바일용 brand안의 박스설정 */
   #brand-m .col-md-6{
     background: white;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
     margin: 10px;
     transition: 0.5s;
-    width:210px; /* 가로사이즈를 pc용보다 작게*/
+    width:45%; /* 가로사이즈를 pc용보다 작게*/
     height: 210px; /* 세로사이즈를 pc용보다 작게*/
     border-radius: 10px !important;
 
