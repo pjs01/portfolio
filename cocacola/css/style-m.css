@@ -248,7 +248,7 @@
     box-sizing: border-box;
     margin: 10px auto;
     transition: 0.5s;
-    width:200px; /* 가로사이즈를 pc용보다 작게*/
+    width: calc(50% - 20px); /* 한 줄에 2개씩 보이도록 설정 */
     aspect-ratio: 1 / 1;
     height: auto !important;
     border-radius: 10px !important;
