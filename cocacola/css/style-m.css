@@ -246,7 +246,7 @@
   #brand-m .col-md-6{
     background: white;
     box-sizing: border-box;
-    margin: 10px auto;
+    margin: 10px;
     transition: 0.5s;
     width: calc(50% - 20px); /* 한 줄에 2개씩 보이도록 설정 */
     aspect-ratio: 1 / 1;
