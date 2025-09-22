@@ -5,7 +5,7 @@
 }
 
 /* device 가로 크기가 767px 이하일 때 적용됨 */
-@media screen and (max-width: 1399px) {
+@media screen and (max-width:767px) {
   html, body {
     max-width: 100% !important;
     overflow-x: hidden !important;
