@@ -242,6 +242,15 @@
     display: block; /* mobile용 brand 보이게 */
     text-align: center !important;
   }
+  #brand-m .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 0 0 48%; /* 2개씩 보이도록 */
+    margin-bottom: 20px; /* 아래 여백 추가 */
+
+  }
+
   /* 모바일용 brand안의 박스설정 */
   #brand-m .col-md-6{
     background: white;
@@ -257,7 +266,7 @@
 
     display: flex;
     align-items: center;        /* 세로 가운데 정렬 */
-
+    
   }
   /* 부모박스에 이미지 크기 딱 맞게 */
   #brand-m .col-md-6 img{
