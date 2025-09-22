@@ -133,6 +133,20 @@
   }
 
 
+/* 스마트폰 화면에서 Slick Slider Dots 설정 */
+
+
+  .slick-dots {
+    
+    z-index: 9999 !important; /* dots가 다른 요소보다 위로 오게 설정 */
+  }
+
+  
+
+
+
+
+
   /* 이달의 pick박스 설정 */
   #month-pick{
     padding: 150px 0 !important;
