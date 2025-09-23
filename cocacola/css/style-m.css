@@ -132,7 +132,11 @@
     left:0;
   }
 
+  .slick-dots li button:before {
+    font-size: 24px  !important; /* 모바일용 크기 */
+  }
 
+ 
 
 
 
