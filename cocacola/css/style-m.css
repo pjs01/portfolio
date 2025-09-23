@@ -139,6 +139,7 @@
   overflow: visible !important;
 }
 
+
 .slick-dots {
   position: absolute !important;
   bottom: 10px !important;
@@ -148,7 +149,7 @@
   opacity: 1 !important;
   display: block !important;
   pointer-events: auto !important;
-  background: transparent !important;
+  background: red !important;
 }
 
 .slick-dots li button:before {
