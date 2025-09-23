@@ -1,3 +1,32 @@
+#landscape-alert {
+  display: none; /* 기본은 숨김 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+#landscape-alert .message p {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+/* 모바일 가로모드일 때 보여주기 */
+@media screen and (orientation: landscape) and (max-width: 1024px) {
+  #landscape-alert {
+    display: flex;
+  }
+}
+
+
 
 @media screen and (max-width:575px) {
   /* 모바일용 2depth메뉴 보이게 */
