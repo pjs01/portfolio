@@ -18,7 +18,7 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <!-- /slick slider -->
 
-  <!-- fontawesom ------------------------------------------------------------------------------------------------------->
+  <!-- fontawesome ------------------------------------------------------------------------------------------------------->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- css 외부파일 -------------------------------------------------------------------------------------------->
@@ -462,5 +462,27 @@
   </footer> 
   <!-- /footer -->
   
+  <div id="landscape-alert">
+    <div class="message">
+      <p>세로모드로 봐주세요 🙏</p>
+    </div>
+  </div>
+
+  <script>
+  function toggleLandscapeAlert() {
+    const alertBox = document.getElementById("landscape-alert");
+    if (window.matchMedia("(orientation: landscape)").matches && window.innerWidth <= 1024) {
+      alertBox.style.display = "flex";
+    } else {
+      alertBox.style.display = "none";
+    }
+  }
+
+  window.addEventListener("load", toggleLandscapeAlert);
+  window.addEventListener("resize", toggleLandscapeAlert);
+  window.addEventListener("orientationchange", toggleLandscapeAlert);
+</script>
+
+
 </body>
 </html>
