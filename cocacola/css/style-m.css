@@ -140,12 +140,13 @@
 
   /* 이달의 pick박스 설정 */
   #month-pick{
-    padding: 150px 0 !important;
+    padding: 130px 0 !important;
     margin-bottom: 50px !important;
     /* background: yellow; */
-    height: 650px !important;
+    height: 750px !important;
     padding-right: 0 !important;   
     overflow: visible;
+
   }
   /* 이달의 pick박스 안의 이미지 설정 */
   #month-pick .thumbnail img{
@@ -157,7 +158,7 @@
 
   #month-pick .slick-dots {
     position: absolute !important;
-    bottom:200px !important;
+    bottom:150px !important;
   }
 
   /* story *****************************************************************************************/
