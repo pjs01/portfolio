@@ -144,8 +144,6 @@ body{background: #eeeeee;}
   opacity: 1 !important;
   display: block !important;
   pointer-events: auto !important;
-
-  border:2px solid black;
   color:black !important;
   font-size:50px !important;
 }
