@@ -158,9 +158,9 @@ body{background: #eeeeee;}
     font-size: 14px  !important;
     line-height: 0;
     display: block;
-    width: 20px;
-    height: 20px;
-    padding: 5px;
+    width: 50px !important;
+    height:50px !important;
+    padding: 15px !important;
     cursor: pointer;
     outline: none;
 
