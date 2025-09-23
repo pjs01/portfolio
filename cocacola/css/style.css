@@ -147,12 +147,12 @@ body{background: #eeeeee;}
   color:black !important;
   font-size:50px !important;
 }
-/* 
+
 .slick-dots li button:before {
   font-size: 14px !important;
-  color: #cba3a3 !important;
+  color: #7c7878 !important;
   opacity: 1 !important;
-} */
+}
 
 .slick-dots li button {
     font-size: 14px  !important;
@@ -164,6 +164,11 @@ body{background: #eeeeee;}
     cursor: pointer;
     outline: none;
 
+}
+
+.slick-dots li.slick-active button:before {
+  color: black !important;
+  opacity: 1 !important;
 }
 
 
