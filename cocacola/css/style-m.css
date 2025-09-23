@@ -5,7 +5,7 @@
 }
 
 /* device 가로 크기가 767px 이하일 때 적용됨 */
-@media screen and (max-width:767px) {
+@media screen and (max-width:767px){
   html, body {
     max-width: 100% !important;
     overflow-x: hidden !important;
@@ -136,10 +136,37 @@
 /* 스마트폰 화면에서 Slick Slider Dots 설정 */
 
 
-  .slick-dots {
-    
-    z-index: 9999 !important; /* dots가 다른 요소보다 위로 오게 설정 */
-  }
+/* slick-dots 위치, z-index, opacity 보장 */
+.slick-dots {
+  position: absolute !important;  /* 절대 위치 지정 */
+  bottom: 15px !important;        /* 모바일에 맞는 위치로 */
+  width: 100% !important;
+  text-align: center !important;
+  z-index: 9999 !important;        /* 충분히 높게 */
+  opacity: 1 !important;           /* 투명도 보장 */
+  display: block !important;       /* 숨겨져 있다면 보이도록 */
+  pointer-events: auto !important; /* 터치 가능하게 */
+}
+
+/* slick-dots 내부 버튼 크기 확대 (선택사항) */
+.slick-dots li button:before {
+  font-size: 12px !important;
+  color: #555 !important;
+  opacity: 1 !important;
+}
+
+/* 활성화된 dots 색상 */
+.slick-dots li.slick-active button:before {
+  color: #000 !important;
+  opacity: 1 !important;
+}
+
+/* 슬라이더 부모의 overflow visible 처리 */
+#slider, #month-pick {
+  overflow: visible !important;
+  position: relative; /* absolute 위치기반을 위해 */
+}
+
 
   
 
