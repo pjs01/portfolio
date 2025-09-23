@@ -134,41 +134,30 @@
 
 
 /* 스마트폰 화면에서 Slick Slider Dots 설정 */
+.slick-slider {
+  position: relative !important;
+  overflow: visible !important;
+}
 
-
-/* slick-dots 위치, z-index, opacity 보장 */
 .slick-dots {
-  position: absolute !important;  /* 절대 위치 지정 */
-  bottom: 15px !important;        /* 모바일에 맞는 위치로 */
+  position: absolute !important;
+  bottom: 10px !important;
   width: 100% !important;
   text-align: center !important;
-  z-index: 9999 !important;        /* 충분히 높게 */
-  opacity: 1 !important;           /* 투명도 보장 */
-  display: block !important;       /* 숨겨져 있다면 보이도록 */
-  pointer-events: auto !important; /* 터치 가능하게 */
-}
-
-/* slick-dots 내부 버튼 크기 확대 (선택사항) */
-.slick-dots li button:before {
-  font-size: 12px !important;
-  color: #555 !important;
+  z-index: 9999 !important;
   opacity: 1 !important;
+  display: block !important;
+  pointer-events: auto !important;
+  background: transparent !important;
 }
 
-/* 활성화된 dots 색상 */
-.slick-dots li.slick-active button:before {
+.slick-dots li button:before {
+  font-size: 14px !important;
   color: #000 !important;
   opacity: 1 !important;
 }
 
-/* 슬라이더 부모의 overflow visible 처리 */
-#slider, #month-pick {
-  overflow: visible !important;
-  position: relative; /* absolute 위치기반을 위해 */
-}
 
-
-  
 
 
 
