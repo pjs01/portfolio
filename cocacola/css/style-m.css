@@ -147,7 +147,8 @@
   pointer-events: auto !important;
   background: red !important;
   border:2px solid black;
-  color:black !important
+  color:black !important;
+  font-size:50px !important;
 }
 
 .slick-dots li button:before {
@@ -156,7 +157,19 @@
   opacity: 1 !important;
 }
 
-
+.slick-dots li button {
+  font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
 
 
 
