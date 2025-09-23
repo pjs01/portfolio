@@ -132,6 +132,44 @@ body{background: #eeeeee;}
   border-radius: 50px;
 }
 
+/* 스마트폰 화면에서 Slick Slider Dots 설정 */
+
+
+.slick-dots {
+  position: absolute !important;
+  bottom: -50px !important;
+  width: 100% !important;
+  text-align: center !important;
+  z-index: 9999 !important;
+  opacity: 1 !important;
+  display: block !important;
+  pointer-events: auto !important;
+  background: red !important;
+  border:2px solid black;
+  color:black !important;
+  font-size:50px !important;
+}
+
+.slick-dots li button:before {
+  font-size: 14px !important;
+  color: #cba3a3 !important;
+  opacity: 1 !important;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: #dc3545;
+    border: 10px solid;
+    outline: none;
+    background: #0d6efd;
+}
+
 
 /* 이달의 pick ****************************************************************/
 
