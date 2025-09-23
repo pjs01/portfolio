@@ -137,7 +137,7 @@ body{background: #eeeeee;}
 #slider .slick-dots,
 #month-pick .slick-dots {
   position: absolute !important;
-  bottom: -50px !important;
+  bottom: -100px !important;
   width: 100% !important;
   text-align: center !important;
   z-index: 9999 !important;
