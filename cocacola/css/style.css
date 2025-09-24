@@ -6,7 +6,7 @@ body{
 
 /* bootstrap의 container */
 .container{
-    padding: 50px 5%; /* 위아래 0, 좌우 5% */
+    padding: 100px 5%; /* 위아래 0, 좌우 5% */
   }
 
 /* Navigation **********************************************************************************/
@@ -177,6 +177,7 @@ body{background: #eeeeee;}
 #month-pick{
   padding:50px 170px !important;
   position: relative !important;
+  margin-top:100px;
 }
 #month-pick h1{
    font-weight: 1000;

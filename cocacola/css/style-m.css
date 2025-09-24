@@ -1,32 +1,3 @@
-#landscape-alert {
-  display: none; /* 기본은 숨김 */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
-  color: #fff;
-  z-index: 9999;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
-
-#landscape-alert .message p {
-  font-size: 20px;
-  line-height: 1.4;
-}
-
-/* 모바일 가로모드일 때 보여주기 */
-@media screen and (orientation: landscape) and (max-width: 1024px) {
-  #landscape-alert {
-    display: flex;
-  }
-}
-
-
 
 @media screen and (max-width:575px) {
   /* 모바일용 2depth메뉴 보이게 */
@@ -34,7 +5,7 @@
 }
 
 /* device 가로 크기가 767px 이하일 때 적용됨 */
-@media screen and (max-width:767px){
+@media screen and (max-width:1200px){
   html, body {
     max-width: 100% !important;
     overflow-x: hidden !important;
@@ -162,17 +133,23 @@
   }
 
   .slick-dots li button:before {
-    font-size: 0; /* 기본 점 없애기 */  
-    content: '\26AA' !important; /* down 화살표 아이콘  */   
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
 
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 50%;
+    height: 18px;
+    margin: 0px;
+    opacity: 1;
+    padding: 0px;
+    width: 18px;
   }
 
-  .slick-dots li.slick-active button:before {
-    content: '\26AB' !important; /* down 화살표 아이콘  */   
+  .slick-dots li.slick-active button:before {   
+
+    /* display: flex; */
+    /* align-items: center;  */
+    border-color: black;
+    /* justify-content: center; */
   }
  
 
