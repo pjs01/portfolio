@@ -1,24 +1,24 @@
-
-@media screen and (max-width:575px) {
+@media screen and (max-width: 575px) {
   /* 모바일용 2depth메뉴 보이게 */
-  #collapsibleNavbar-m{ opacity: 1 !important;}
+  #collapsibleNavbar-m {
+    opacity: 1 !important;
+  }
 }
 
-/* device 가로 크기가 767px 이하일 때 적용됨 */
-@media screen and (max-width:1200px){
-  html, body {
+/* device 가로 크기가 max-width:1200px 이하일 때 적용됨. */
+@media screen and (max-width: 1200px) {
+  html,
+  body {
     max-width: 100% !important;
     overflow-x: hidden !important;
   }
-
 
   #month-pick .slider-container {
     overflow: hidden;
   }
 
-    
-    /* 모바일용 서브메뉴를 1depth에 마우스 커서가 올라갔을 때(hover) 2depth가 펼쳐지는 방식 그대로 사용할 경우 */
-    /* #collapsibleNavbar{
+  /* 모바일용 서브메뉴를 1depth에 마우스 커서가 올라갔을 때(hover) 2depth가 펼쳐지는 방식 그대로 사용할 경우 */
+  /* #collapsibleNavbar{
       position: fixed !important;
       width: 100% !important;
       height: 100% !important;
@@ -29,25 +29,25 @@
       left: 0;
       
       } */
-      
-      
+
   /* 코카콜라아이콘, 햄버거메뉴 위로 올라가게 조정 */
-  nav .container{padding:0 10px !important;}
+  nav .container {
+    padding: 0 10px !important;
+  }
   /* 모바일용 2depth메뉴 보이게 */
   /* #collapsibleNavbar-m{ opacity: 1 !important;} */
   /* 모바일용 2depth메뉴 설정. full screen */
-  #collapsibleNavbar-m{
+  #collapsibleNavbar-m {
     position: fixed !important; /* 위치 고정 */
     width: 100% !important;
     height: 100% !important;
-    top:0;
+    top: 0;
     left: 0;
-    background-color: white !important; 
+    background-color: white !important;
     z-index: 999999999 !important; /* 맨 위로 올라오게 설정 */
-    
   }
-  #collapsibleNavbar-m .panel{
-    color:rgb(69, 69, 69);
+  #collapsibleNavbar-m .panel {
+    color: rgb(69, 69, 69);
     font-size: 16px;
     font-weight: lighter;
   }
@@ -67,23 +67,28 @@
     transition: 0.4s;
   }
   /* 배경색 변경 */
-  .active, .accordion:hover {
+  .active,
+  .accordion:hover {
     background-color: #ccc;
   }
   /* '>' 화살표 설정 */
-  .accordion::after{ 
-    content: '\f054' !important; /* '>' 화살표 아이콘  */
+  .accordion::after {
+    content: "\f054" !important; /* '>' 화살표 아이콘  */
     font-family: "Font Awesome 7 Free"; /* fontawesom 버젼 7 무료 글꼴*/
     color: #777;
     font-weight: bold;
     float: right; /* 화살표를 가로방향 오른쪽으로 정렬 */
     margin-left: 5px;
   }
-  #collapsibleNavbar-m .accordion:nth-of-type(1)::after{ opacity: 0 !important;}
-  #collapsibleNavbar-m .accordion:nth-of-type(4)::after{ opacity: 0 !important;}
+  #collapsibleNavbar-m .accordion:nth-of-type(1)::after {
+    opacity: 0 !important;
+  }
+  #collapsibleNavbar-m .accordion:nth-of-type(4)::after {
+    opacity: 0 !important;
+  }
   /* down 화살표 설정 */
-  .accordion.active::after {  
-    content:'\f078' !important; /* down 화살표 아이콘  */
+  .accordion.active::after {
+    content: "\f078" !important; /* down 화살표 아이콘  */
   }
   /* 버튼클릭시 펼쳐지는 박스 설정  */
   .panel {
@@ -94,11 +99,12 @@
     transition: max-height 0.2s ease-out;
   }
 
-
   /* slider **************************************/
 
   /* 글자 가운데 정렬 */
-  .slide{ text-align: center !important;}
+  .slide {
+    text-align: center !important;
+  }
   /* 슬라이더 크기 조절 */
   .slider-container,
   .slider,
@@ -109,34 +115,33 @@
     border-radius: 10px;
   }
   /* pc용 슬라이더와 모바일용 슬라이더를 미리 만들어 두고 교체방식으로 구현 */
-  .slider-pc{
+  .slider-pc {
     display: none !important; /* pc용 슬라이더 안보이게 */
-  }  
-  .slider-m{
+  }
+  .slider-m {
     display: block !important; /* 모바일용 슬라이더 보이게 */
-  }   
+  }
 
   /* 글자와 버튼을 가운데 정렬하기 위해서 부모의 크기 조절 */
   .slide .caption,
-  .slide .more{      
-    width: 100%;  
+  .slide .more {
+    width: 100%;
   }
   /* 글자 위치 조절 */
-  .slide .caption{     
+  .slide .caption {
     top: 550px !important;
-    left:0;
+    left: 0;
   }
   /* 버튼 위치 조절 */
-  .slide .more{     
-    top: 650px !important;     
-    left:0;
+  .slide .more {
+    top: 650px !important;
+    left: 0;
   }
 
   .slick-dots li button:before {
-
     background-color: transparent;
     border: 1px solid gray;
-    border-radius: 50%;
+    border-radius: 8000px;
     height: 18px;
     margin: 0px;
     opacity: 1;
@@ -144,31 +149,21 @@
     width: 18px;
   }
 
-  .slick-dots li.slick-active button:before {   
-
-    /* display: flex; */
-    /* align-items: center;  */
+  .slick-dots li.slick-active button:before {
     border-color: black;
-    /* justify-content: center; */
   }
- 
-
-
-
-
 
   /* 이달의 pick박스 설정 */
-  #month-pick{
+  #month-pick {
     padding: 130px 0 !important;
     margin-bottom: 50px !important;
     /* background: yellow; */
     height: 750px !important;
-    padding-right: 0 !important;   
+    padding-right: 0 !important;
     overflow: visible;
-
   }
   /* 이달의 pick박스 안의 이미지 설정 */
-  #month-pick .thumbnail img{
+  #month-pick .thumbnail img {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     width: 100%;
@@ -177,20 +172,21 @@
 
   #month-pick .slick-dots {
     position: absolute !important;
-    bottom:90px !important;
+    bottom: 90px !important;
   }
 
   /* story *****************************************************************************************/
-  #story{
+  #story {
     height: 700px;
     padding: 100px 0 !important;
     /* background: red; */
+    /* display: flex; */
+    align-items: center !important;
   }
 
-
   /* 1번박스 설정. 1번박스를 기준으로 2번박스 위치 설정 */
-  #story .col-md-6:nth-child(1){
-    width:400px !important;
+  #story .col-md-6:nth-child(1) {
+    width: 400px !important;
     height: 200px !important;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -201,57 +197,51 @@
     position: relative; /* 기준 위치 */
   }
 
-  #story .col-md-6:nth-child(2){
-    height:300px !important;
-    margin:0 !important;
+  #story .col-md-6:nth-child(2) {
+    height: 300px !important;
+    margin: 0 !important;
   }
 
   /* #story img{display: none;} */
 
   #tomorrow .row,
-  #story .row{
+  #story .row {
     height: 300px !important;
-    
   }
 
   #story .col-md-6:nth-child(1) .btn,
-  #tomorrow .col-md-6:nth-child(2) .btn{
-    margin-top:0px;
-    border:2px solid black;
+  #tomorrow .col-md-6:nth-child(2) .btn {
+    margin-top: 0px;
+    border: 2px solid black;
     border-radius: 50px;
     padding: 5px 100px !important;
     width: 90%;
     font-weight: bold;
 
-
-    position: absolute;  /* 부모 박스 기준 절대 위치 */
-    bottom: 15px;        /* 부모 박스 padding만큼 띄우기 */
+    position: absolute; /* 부모 박스 기준 절대 위치 */
+    bottom: 15px; /* 부모 박스 padding만큼 띄우기 */
     left: 0;
     right: 0;
     margin: auto;
-
   }
-
 
   /* tomorrow *************************************************************************************/
-  #tomorrow{
+  #tomorrow {
     height: 700px;
-    padding:0;
+    padding: 0;
     display: flex;
-    flex-direction: column;  /* 세로로 배치 */
-    align-items: stretch;    /* 자식 요소들이 부모에 맞게 늘어지도록 설정 */
-    padding: 40px 0;         /* 충분한 여백을 추가 */
+    flex-direction: column; /* 세로로 배치 */
+    align-items: stretch; /* 자식 요소들이 부모에 맞게 늘어지도록 설정 */
+    padding: 40px 0; /* 충분한 여백을 추가 */
   }
 
-  #tomorrow .col-md-6:nth-child(1){
+  #tomorrow .col-md-6:nth-child(1) {
     margin-bottom: -400px !important; /* 아래쪽 박스가 위로 올라와서 겹치게 */
-    height:300px !important;
-
-    
+    height: 300px !important;
   }
 
-  #tomorrow .col-md-6:nth-child(2){
-    width:400px !important;
+  #tomorrow .col-md-6:nth-child(2) {
+    width: 400px !important;
     height: 250px !important;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -259,7 +249,6 @@
 
     position: relative; /* 기준 위치 */
   }
-
 
   /* brand ***************************************************************************************/
 
@@ -277,11 +266,10 @@
     justify-content: space-between;
     flex: 0 0 48%; /* 2개씩 보이도록 */
     margin-bottom: 20px; /* 아래 여백 추가 */
-
   }
 
   /* 모바일용 brand안의 박스설정 */
-  #brand-m .col-md-6{
+  #brand-m .col-md-6 {
     background: white;
     box-sizing: border-box;
     margin: 10px;
@@ -291,76 +279,70 @@
     height: auto !important;
     border-radius: 10px !important;
 
-
-
     display: flex;
-    align-items: center;        /* 세로 가운데 정렬 */
-    
+    align-items: center; /* 세로 가운데 정렬 */
   }
   /* 부모박스에 이미지 크기 딱 맞게 */
-  #brand-m .col-md-6 img{
-    width: 100%;  
+  #brand-m .col-md-6 img {
+    width: 100%;
   }
   /* 마우스가 올라갔을때 확대 */
-  #brand-m .col-md-6:hover{
+  #brand-m .col-md-6:hover {
     transform: scale(1.05);
   }
 
-  #brand-m .btn{
+  #brand-m .btn {
     border-radius: 50px;
-    padding:5px 100px;
+    padding: 5px 100px;
     display: block;
-    width:90%;
+    width: 90%;
     margin: 45px auto !important;
-    border:2px solid black;
+    border: 2px solid black;
     font-weight: bold;
-
   }
-
 
   /* footer ***********************************************************************/
 
   /* 모바일용 footer와 pc용 footer를 미리 만들어서 교체방식으로 구현 */
-  #footer-pc{
+  #footer-pc {
     display: none; /* pc용 footert 안보이게 */
   }
-  #footer-m{
+  #footer-m {
     display: block !important; /* mobile용 footer 보이게 */
     background: black !important;
-    color:white !important;
-    padding-top: 50px !important; 
-    padding-left:10px !important;   
+    color: white !important;
+    padding-top: 50px !important;
+    padding-left: 10px !important;
   }
-  #footer-m hr{  
-      opacity: 1;
-      border-top: 1px solid white;
+  #footer-m hr {
+    opacity: 1;
+    border-top: 1px solid white;
   }
 
   /* 전체적으로 배경색을 검은색으로,글자색은 흰색으로 통일. */
   #footer-m button,
-  #footer-m div{
+  #footer-m div {
     background: black !important;
-    color:white !important;
+    color: white !important;
   }
-  #footer-m>div:nth-child(1){
+  #footer-m > div:nth-child(1) {
     text-align: center !important;
     background: red !important;
   }
 
   /* down화살표를 클릭시 up화살표로 변경 설정 */
   #footer-m .accordion::after {
-    content: '\f107' !important; /* down 화살표 아이콘  */
+    content: "\f107" !important; /* down 화살표 아이콘  */
     font-family: "Font Awesome 7 Free" !important; /* fontawesom 버젼 7 무료 글꼴*/
     color: #777 !important;
     font-weight: bold !important;
     float: right !important;
     margin-left: 5px !important;
-
   }
   #footer-m .active::after {
-    content:'\f106' !important; /* up 화살표 아이콘  */
+    content: "\f106" !important; /* up 화살표 아이콘  */
   }
-  #footer-m .btn{
+  #footer-m .btn {
     /* color:white;
     border:2px solid white;
     border-radius: 50px;
@@ -368,32 +350,29 @@
     display: block;
     width:90%;
     margin: 45px auto !important; */
-    color:white;
+    color: white;
     border-radius: 50px;
-    padding:5px 100px;
+    padding: 5px 100px;
     display: block;
-    width:90%;
+    width: 90%;
     margin: 45px auto !important;
-    border:2px solid white;
+    border: 2px solid white;
     font-weight: bold;
-
   }
 
-  #footer-m .fa-brands{
+  #footer-m .fa-brands {
     display: inline-block;
     width: 30px;
     height: 30px;
     border: 2px solid white;
     border-radius: 50%;
     line-height: 26px;
-     margin:5px;
+    margin: 5px;
   }
 
-  #footer-m .store-badge img{
-    border:1px solid white;
+  #footer-m .store-badge img {
+    border: 1px solid white;
     border-radius: 5px;
-    width:150px;
+    width: 150px;
   }
-  
-
 }
