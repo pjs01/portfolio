@@ -139,8 +139,7 @@
   }
 
   .slick-dots li button:before {
-    background-color: transparent;
-    border: 1px solid gray;
+    background-color: black;
     border-radius: 8000px;
     height: 18px;
     margin: 0px;
@@ -149,9 +148,6 @@
     width: 18px;
   }
 
-  .slick-dots li.slick-active button:before {
-    border-color: black;
-  }
 
   /* 이달의 pick박스 설정 */
   #month-pick {
