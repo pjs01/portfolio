@@ -138,18 +138,22 @@
     left: 0;
   }
 
-  .slick-dots li button:after {
-    background-color: gray;
-    border-radius: 8000px;
-    height: 18px;
-    margin: 0px;
-    opacity: 1;
-    padding: 0px;
-    width: 18px;
+  .slick-dots li button{
+    width: 0px !important;
+  }
+  .slick-dots li button:before {
+    content: "\f111" !important; /* '>' 화살표 아이콘  */
+    font-family: "Font Awesome 7 Free"; /* fontawesom 버젼 7 무료 글꼴*/
+    color: #777 !important;
+    font-weight: bold !important;
+    float: right !important;
+    margin-left: 5px !important;
   }
 
-  .slick-dots li.slick-active button:after {
-     background-color: black;
+  .slick-dots li.slick-active button:before {
+    content: "\f192" !important; /* '>' 화살표 아이콘  */
+    font-family: "Font Awesome 7 Free"; /* fontawesom 버젼 7 무료 글꼴*/
+     /* background-color: black; */
   }
 
   /* 이달의 pick박스 설정 */
