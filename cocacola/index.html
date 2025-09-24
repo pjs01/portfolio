@@ -461,27 +461,7 @@
     </div> 
   </footer> 
   <!-- /footer -->
-  
-  <div id="landscape-alert">
-    <div class="message">
-      <p>세로모드로 봐주세요 🙏</p>
-    </div>
-  </div>
 
-  <script>
-  function toggleLandscapeAlert() {
-    const alertBox = document.getElementById("landscape-alert");
-    if (window.matchMedia("(orientation: landscape)").matches && window.innerWidth <= 1024) {
-      alertBox.style.display = "flex";
-    } else {
-      alertBox.style.display = "none";
-    }
-  }
-
-  window.addEventListener("load", toggleLandscapeAlert);
-  window.addEventListener("resize", toggleLandscapeAlert);
-  window.addEventListener("orientationchange", toggleLandscapeAlert);
-</script>
 
 
 </body>
